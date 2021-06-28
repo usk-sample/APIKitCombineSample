@@ -1,4 +1,4 @@
 # APIKitCombineSample
 
 # LICENSE
-[LICENSE](LICENSE.md)
+[LICENSE](LICENSE)

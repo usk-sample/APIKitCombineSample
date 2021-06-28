@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,12 @@
 		A8C7765426894339005C4CD2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7765326894339005C4CD2 /* ContentView.swift */; };
 		A8C776562689433A005C4CD2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C776552689433A005C4CD2 /* Assets.xcassets */; };
 		A8C776592689433A005C4CD2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A8C776582689433A005C4CD2 /* Preview Assets.xcassets */; };
+		A8C7766226894531005C4CD2 /* APIKit in Frameworks */ = {isa = PBXBuildFile; productRef = A8C7766126894531005C4CD2 /* APIKit */; };
+		A8C776672689469A005C4CD2 /* GitHubRequestProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C776662689469A005C4CD2 /* GitHubRequestProtocol.swift */; };
+		A8C776692689480F005C4CD2 /* GitHubRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C776682689480F005C4CD2 /* GitHubRepository.swift */; };
+		A8C7766B268948D5005C4CD2 /* SearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7766A268948D5005C4CD2 /* SearchResponse.swift */; };
+		A8C7766D26894983005C4CD2 /* SerachViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7766C26894983005C4CD2 /* SerachViewModel.swift */; };
+		A8C7766F26894B70005C4CD2 /* GitHubApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8C7766E26894B70005C4CD2 /* GitHubApi.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +26,11 @@
 		A8C776552689433A005C4CD2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A8C776582689433A005C4CD2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A8C7765A2689433A005C4CD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A8C776662689469A005C4CD2 /* GitHubRequestProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRequestProtocol.swift; sourceTree = "<group>"; };
+		A8C776682689480F005C4CD2 /* GitHubRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubRepository.swift; sourceTree = "<group>"; };
+		A8C7766A268948D5005C4CD2 /* SearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResponse.swift; sourceTree = "<group>"; };
+		A8C7766C26894983005C4CD2 /* SerachViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SerachViewModel.swift; sourceTree = "<group>"; };
+		A8C7766E26894B70005C4CD2 /* GitHubApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubApi.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +38,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C7766226894531005C4CD2 /* APIKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +66,8 @@
 			children = (
 				A8C7765126894339005C4CD2 /* APIKitCombineSampleApp.swift */,
 				A8C7765326894339005C4CD2 /* ContentView.swift */,
+				A8C7766C26894983005C4CD2 /* SerachViewModel.swift */,
+				A8C7766326894640005C4CD2 /* API */,
 				A8C776552689433A005C4CD2 /* Assets.xcassets */,
 				A8C7765A2689433A005C4CD2 /* Info.plist */,
 				A8C776572689433A005C4CD2 /* Preview Content */,
@@ -67,6 +81,17 @@
 				A8C776582689433A005C4CD2 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A8C7766326894640005C4CD2 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				A8C776662689469A005C4CD2 /* GitHubRequestProtocol.swift */,
+				A8C776682689480F005C4CD2 /* GitHubRepository.swift */,
+				A8C7766A268948D5005C4CD2 /* SearchResponse.swift */,
+				A8C7766E26894B70005C4CD2 /* GitHubApi.swift */,
+			);
+			path = API;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +110,9 @@
 			dependencies = (
 			);
 			name = APIKitCombineSample;
+			packageProductDependencies = (
+				A8C7766126894531005C4CD2 /* APIKit */,
+			);
 			productName = APIKitCombineSample;
 			productReference = A8C7764E26894339005C4CD2 /* APIKitCombineSample.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +140,9 @@
 				Base,
 			);
 			mainGroup = A8C7764526894339005C4CD2;
+			packageReferences = (
+				A8C7766026894531005C4CD2 /* XCRemoteSwiftPackageReference "APIKit" */,
+			);
 			productRefGroup = A8C7764F26894339005C4CD2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +169,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A8C7766D26894983005C4CD2 /* SerachViewModel.swift in Sources */,
+				A8C776692689480F005C4CD2 /* GitHubRepository.swift in Sources */,
+				A8C7766B268948D5005C4CD2 /* SearchResponse.swift in Sources */,
 				A8C7765426894339005C4CD2 /* ContentView.swift in Sources */,
 				A8C7765226894339005C4CD2 /* APIKitCombineSampleApp.swift in Sources */,
+				A8C7766F26894B70005C4CD2 /* GitHubApi.swift in Sources */,
+				A8C776672689469A005C4CD2 /* GitHubRequestProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,6 +362,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A8C7766026894531005C4CD2 /* XCRemoteSwiftPackageReference "APIKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ishkawa/APIKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A8C7766126894531005C4CD2 /* APIKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A8C7766026894531005C4CD2 /* XCRemoteSwiftPackageReference "APIKit" */;
+			productName = APIKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A8C7764626894339005C4CD2 /* Project object */;
 }
